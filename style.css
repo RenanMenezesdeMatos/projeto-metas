@@ -1,0 +1,169 @@
+@charset "UTF-8"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --ligth-blue: #4387F4;
+    --dark-blue: #326AC5;
+    --ligth-orange: #F26433;
+    --dark-orange: #BE4E27;
+    --ligth-black: #4E4E4E;
+    --ligth-gray: #F9F9F9;
+
+    --roboto-slab: 'Roboto Slab';
+    --roboto-condensed: 'Roboto Condensed'; 
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    color: var(--ligth-black);
+}
+
+/*Configurando o Header*/
+
+header{
+    width: 100vw;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container-header{
+    background-color: var(--ligth-gray);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#content-header{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0px 18px 0px;
+    align-items: center;
+}
+
+/*Fim da configuração do Header*/
+
+/*Configurando o Main*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-items: center;
+}
+
+    /*Configurando mensagens de introdução*/
+
+#introduction-messenger{
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#introduction-messenger> h1{
+    font-family: var(--roboto-slab);
+    font-weight: 400;
+    font-size: 32px;
+    display: block;
+}
+
+#introduction-messenger> h3{
+    font-family: var(--roboto-condensed);
+    font-weight: 300;
+    font-size: 16px;
+    display: block;
+}
+
+    /*Fim da configuração da mensagens de introdução*/
+
+#goals-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#container-register-goals{
+    position: absolute;
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    margin-bottom: 24px;
+    cursor:pointer;
+    width: 180px;
+    height: 35px;
+}
+
+#container-register-goals  a{
+    position: absolute;
+    top: -10px;
+    background-color: var(--ligth-blue);
+    color: #ffffff;
+    font-family: var(--roboto-slab);
+    font-size:16px;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+#container-register-goals  a:hover{
+    background-color: var(--ligth-orange);
+}
+
+/*Fim da configuração do Main*/
+
+#container-main-content{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.goals {
+   position: relative;
+   width: 380px;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--ligth-gray);
+   margin: 18px 18px 18px 0px;
+   padding: 18px;
+}
+
+.goals>h2 {
+    font-family: var(--roboto-slab);
+    color: var(--ligth-orange);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.goals>p {
+    font-family: var(--roboto-slab);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+#bin{
+    background-color: var(--dark-blue);
+    color: white;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+
+
