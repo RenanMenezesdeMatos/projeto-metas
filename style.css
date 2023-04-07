@@ -1,6 +1,6 @@
 @charset "UTF-8"; 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --ligth-blue: #4387F4;
@@ -12,6 +12,7 @@
 
     --roboto-slab: 'Roboto Slab';
     --roboto-condensed: 'Roboto Condensed'; 
+    --open-sans: 'Open Sans';
 }
 
 *{
@@ -22,9 +23,6 @@
 
 body{
     background-color: white;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
     color: var(--ligth-black);
 }
 
@@ -64,6 +62,8 @@ main{
     flex-direction: column;
     max-width: 800px;
     align-items: center;
+    margin: 0px auto 0px auto;
+    position: relative;
 }
 
     /*Configurando mensagens de introdução*/
@@ -100,30 +100,31 @@ main{
     position: absolute;
     background-color: var(--dark-blue);
     color: #ffffff;
-    margin-bottom: 24px;
+    /*margin-bottom: 24px;*/
     cursor:pointer;
-    width: 180px;
-    height: 35px;
+    width: 165px;
+    height: 25px;
+    margin-left: 20px;
 }
 
 #container-register-goals  a{
     position: absolute;
     top: -10px;
+    left: -4px;
     background-color: var(--ligth-blue);
     color: #ffffff;
     font-family: var(--roboto-slab);
     font-size:16px;
-    padding: 8px;
+    padding: 5px;
     text-decoration: none;
     font-weight: 400;
 }
-
 
 #container-register-goals  a:hover{
     background-color: var(--ligth-orange);
 }
 
-/*Fim da configuração do Main*/
+
 
 #container-main-content{
     margin-top: 40px;
@@ -139,7 +140,7 @@ main{
    display: flex;
    flex-direction: column;
    background-color: var(--ligth-gray);
-   margin: 18px 18px 18px 0px;
+   margin: 18px 18px 0px 0px;
    padding: 18px;
 }
 
@@ -148,6 +149,7 @@ main{
     color: var(--ligth-orange);
     font-size: 24px;
     font-weight: 400;
+    margin-bottom: 18px;
 }
 
 .goals>p {
@@ -163,6 +165,57 @@ main{
     position: absolute;
     right: 0px;
     bottom: 0px;
+}
+
+/*Fim da configuração do Main*/
+
+#print-out-container{
+    background-color: var(--dark-blue);
+    margin-right: 18px;
+}
+
+#print-out{
+    font-family: var(--roboto-slab);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 56px;
+    position: absolute;
+    background-color: var(--ligth-blue);
+    color: #ffffff;
+    right: 18px;
+    padding: 6px;
+}
+
+/*Inicio Footer*/
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--ligth-black);
+    color: #ffffff;
+    height: 52px;
+    margin-top: 25px;
+}
+
+#container-footer{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#social-media{
+    background-color: aquamarine;
+
 }
 
 
