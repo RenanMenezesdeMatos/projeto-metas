@@ -42,15 +42,26 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 #content-header{
     width: 800px;
     display: flex;
     justify-content: space-between;
-    padding: 18px 0px 18px 0px;
+    padding: 9px 0px 9px 0px;
     align-items: center;
+}
+
+#container-toggle-theme{
+    position: relative;
+}
+
+#toggle-theme{
+    top: -21px;
+    position: absolute;
+    height: 42px;
+    width: 76px;
+    background-color: var(--ligth-gray);
 }
 
 /*Fim da configuração do Header*/
@@ -99,12 +110,12 @@ main{
 #container-register-goals{
     position: absolute;
     background-color: var(--dark-blue);
-    color: #ffffff;
-    /*margin-bottom: 24px;*/
-    cursor:pointer;
-    width: 165px;
-    height: 25px;
     margin-left: 20px;
+    width: 100%;
+}
+
+#container-register-goals ul{
+    list-style: none;
 }
 
 #container-register-goals  a{
@@ -118,10 +129,13 @@ main{
     padding: 5px;
     text-decoration: none;
     font-weight: 400;
+    box-shadow: 4px 4px 0px var(--dark-blue);
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
 }
 
-#container-register-goals  a:hover{
-    background-color: var(--ligth-orange);
+#container-register-goals  a:hover,#container-register-goals  a:focus{
+    background-color: var(--ligth-blue);
+    box-shadow: -4px -4px 0px var(--dark-blue);
 }
 
 
@@ -160,18 +174,16 @@ main{
 }
 
 #bin{
-    background-color: var(--dark-blue);
-    color: white;
     position: absolute;
-    right: 0px;
-    bottom: 0px;
+    right: 10px;
+    bottom: 5px;
 }
 
 /*Fim da configuração do Main*/
 
 #print-out-container{
-    background-color: var(--dark-blue);
     margin-right: 18px;
+
 }
 
 #print-out{
@@ -181,9 +193,16 @@ main{
     margin-top: 56px;
     position: absolute;
     background-color: var(--ligth-blue);
+    box-shadow: 4px 4px 0px var(--dark-blue);
     color: #ffffff;
     right: 18px;
     padding: 6px;
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
+    cursor: pointer;
+}
+
+#print-out:hover{
+    box-shadow: -4px -4px 0px var(--dark-blue);
 }
 
 /*Inicio Footer*/
@@ -202,6 +221,7 @@ footer{
 }
 
 #container-footer{
+    position: relative;
     width: 800px;
     display: flex;
     flex-wrap: wrap;
@@ -213,10 +233,79 @@ footer{
     font-size: 12px;
 }
 
-#social-media{
-    background-color: aquamarine;
+    /*Config social media*/
 
+#social-media{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0px;
 }
+
+.imagem a{
+    display: flex;
+    background-color: var(--ligth-orange);
+    margin-right: 12px;
+    width: 31px;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 0px var(--dark-orange);
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
+}
+
+.imagem a:hover{
+    box-shadow: -4px -4px 0px var(--dark-orange);  
+}
+
+    /*Fim da config social media*/
+
+/*Criação de menu hamburger*/
+
+#menu-burger{
+    position: relative;
+    height: 40px;
+    width: 35px;
+}
+
+.blue-line-menu-1{
+    top: 0px;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: var(--ligth-blue);
+}
+
+.orange-line-menu-1{
+    top: 10px;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: var(--ligth-orange);
+}
+
+.blue-line-menu-2{
+    top: 20px;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: var(--ligth-blue);
+}
+
+.orange-line-menu-2{
+    top: 30px;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: var(--ligth-orange);
+}
+
+/*Fim da criação de menu hamburger*/
+
+
+
+
+
 
 
 
