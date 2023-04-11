@@ -260,7 +260,8 @@ footer{
 
     /*Fim da config social media*/
 
-/*Criação de menu hamburger*/
+/*------------------------------CRIAÇÃO DO MENU SANDWIC----------------------------------*/
+
 
 #menu-burger{
     position: relative;
@@ -300,10 +301,19 @@ footer{
     background-color: var(--ligth-orange);
 }
 
-/*Fim da criação de menu hamburger*/
+/*------------------------------CRIAÇÃO DA ÁREA DE FORMULÁRIOS----------------------------------*/
 
+#content-forms{
+    top: 0px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff80;
+}
 
-
+#forms-area{
+    width: ;
+}
 
 
 
