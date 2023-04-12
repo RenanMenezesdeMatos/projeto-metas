@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Crie suas metas!</title>
-
-    <!--fontes externas-->
-   
-    <!--fim das fontes-->
+    <script src="index.js" defer></script>
 
 </head>
 <body>
@@ -142,19 +139,19 @@
 <div id="content-forms">
     <div id="forms-area">
 
-        <label for="objective-name">Dê um nome para seu objetivo!</label>
-        <input type="text" name="objective-name" id="objective-name">
+        <div id="closed-btn">X</div>
 
-        <label for="objective-cost">Quanto custa seu objetivo?</label>
-        <input type="text" name="objective-cost" id="objective-cost">
-
-        <label for="objective-time">Quando você pretende atingir seu objetivo?</label>
-        <input type="text" name="objective-time" id="objective-time">
-
-        <label for="objective-savings">Quanto tem guardado?</label>
-        <input type="text" name="objective-savings" id="objective-savings">
-
-        <input type="button" value="Criar Meta!">
+        <form>
+            <label for="objective-name">Dê um nome para seu objetivo!</label>
+            <input type="text" name="objective-name" id="objective-name" class="formulario">
+            <label for="objective-cost">Quanto custa seu objetivo?</label>
+            <input type="text" name="objective-cost" id="objective-cost" class="formulario">
+            <label for="objective-time">Quando você pretende atingir seu objetivo?</label>
+            <input type="text" name="objective-time" id="objective-time" class="formulario">
+            <label for="objective-savings">Quanto tem guardado?</label>
+            <input type="text" name="objective-savings" id="objective-savings" class="formulario">
+            <div id="create-goal-btn">Criar Meta!</div>
+        </form>
 
     </div>
 </div>

@@ -303,19 +303,100 @@ footer{
 
 /*------------------------------CRIAÇÃO DA ÁREA DE FORMULÁRIOS----------------------------------*/
 
+
 #content-forms{
+    display: none;
+    justify-content: center;
+    align-items: center;
     top: 0px;
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: #ffffff80;
+    background-color: #ffffffa6;
 }
 
 #forms-area{
-    width: ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 458px;
+    height: 400px;
+    background-color: var(--ligth-gray);
+    padding: 22px;
+    color: var(--ligth-black);
+    font-family: var(--roboto-slab);
 }
 
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.formulario{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 35px;
+    padding: 5px;
+}
 
+#closed-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 400;
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: var(--ligth-orange);
+    box-shadow: 4px 4px 0px 0px var(--dark-orange);
+    cursor: pointer;
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s; 
+}
+
+#closed-btn:hover{
+    box-shadow: -4px -4px 0px 0px var(--dark-orange);
+}
+
+input{
+    background-color: #ffffff00;
+    border: none;
+    border-bottom: 2px solid var(--ligth-blue);
+}
+
+input:focus{
+    color: var(--ligth-black);
+    font-size: 14px;
+    font-family: var(--roboto-condensed);
+    outline: none;
+    border: 2px solid var(--ligth-blue)
+}
+
+input:valid{
+    color: var(--ligth-black);
+    font-family: var(--roboto-condensed);
+    font-size: 14px;
+    outline: none;
+}
+
+#create-goal-btn{
+    position: absolute;
+    background-color: var(--ligth-blue);
+    padding: 8px;
+    bottom: 20px;
+    right: 20px;
+    color: #FFFFFF;
+    box-shadow: 4px 4px 0px 0px var(--dark-blue);
+    cursor: pointer;
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s; 
+}
+
+#create-goal-btn:hover{
+    box-shadow: -4px -4px 0px 0px var(--dark-blue);    
+}
 
 
