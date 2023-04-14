@@ -304,7 +304,7 @@ footer{
 /*------------------------------CRIAÇÃO DA ÁREA DE FORMULÁRIOS----------------------------------*/
 
 
-#content-forms{
+.content-forms-none{
     display: none;
     justify-content: center;
     align-items: center;
@@ -313,6 +313,19 @@ footer{
     width: 100vw;
     height: 100vh;
     background-color: #ffffffa6;
+    transition-duration: 2s;
+}
+
+.content-forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffffa6;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
 }
 
 #forms-area{
