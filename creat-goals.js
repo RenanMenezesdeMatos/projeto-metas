@@ -4,9 +4,6 @@ let row = 0
 // Capturando os valores dos Inputs//
 
 let objectiveName = document.getElementById('objective-name')
-let objectiveCost = document.getElementById('objective-cost')
-let objectiveTime = document.getElementById('objective-time')
-let objectiveSavings = document.getElementById('objective-savings')
 let textContent = `Você atingiu o seu objetivo, em (inserir variável de data futura) seu objetivo custará (inserir variável de valor total), se for persistente seu objetivo te custará (Inserir variável do valor mensal) ao mês.`
 
 
@@ -19,23 +16,35 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
         return contentGoals
     }
 
-    let creatGoalsContent = function (titulo, idb, texto){
-        let titleH2 = document.querySelector(`.goals-${row}>h2`)
-        titleH2.innerText = titulo
+    let creatGoalsContent = function (id, classe =''){
+        let creatDivForContent = document.createElement('div')
+        creatDivForContent.id = id
+        creatDivForContent.classList = classe
+        return creatDivForContent
+    }
 
-        let bin2 = document.createElement('div')
-        bin2.id = idb
-
-        let paragraph = document.createElement('p')
-        paragraph.innerHTML = texto
+    let creatH2 = function(classe='title-plan'){
+        let creatH2Tag = document.createElement('h2')
+        creatH2Tag.className = classe
+        creatH2Tag.innerText = objectiveName.value
+        return creatH2Tag
 
     }
 
-    let creatBin = function (imagem){
+    let creatTextArea = function(){
+        let textArea = document.createElement('p')
+        textArea.innerText = `Você atingiu o seu objetivo, em (inserir variável de data futura) seu objetivo custará (inserir variável de valor total), se for persistente seu objetivo te custará (Inserir variável do valor mensal) ao mês`
+        return textArea
+    }
+
+    let creatBin = function (){
         let creatImageBin = document.createElement('img')
-        creatImageBin.src = imagem
+        creatImageBin.src = "image/Bin.png"
         creatImageBin.alt = "Lixeira"
+        return creatImageBin
     }
+
+
 
     let creatAllElementsGoals = function (){
         row++
@@ -43,10 +52,22 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
             creatGoalsGeneral('goal-'+row)
         )
 
-        document.getElementById('goal-'+row).append(
-            creatGoalsContent(objectiveName.value,'bin',textContent)
+        let divCriada = document.getElementById(`goal-${row}`)
+        let inicializacao = document.getElementById('introduction-messenger')
+
+        divCriada.append(
+            creatGoalsContent(`bin-${row}`, 'bin'),
+            creatH2(),
+            creatTextArea(),
         )
 
+        let lixeira = document.getElementById(`bin-${row}`)
+
+        lixeira.append(
+            creatBin()
+        )
+
+        
         objectiveName.value=''
     }
 

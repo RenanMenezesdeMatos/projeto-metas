@@ -79,6 +79,18 @@ main{
 
     /*Configurando mensagens de introdução*/
 
+.initialing-program{
+    display: flex;
+    align-items: center;
+    font-family: var(--roboto-slab);
+    font-size: 14px;
+    height: 300px;
+}
+
+.initialing-program-none{
+    display: none;
+}
+
 #introduction-messenger{
     margin-bottom: 24px;
     display: flex;
@@ -173,7 +185,7 @@ main{
     margin-bottom: 15px;
 }
 
-#bin{
+.bin{
     position: absolute;
     right: 10px;
     bottom: 5px;
@@ -412,4 +424,12 @@ input:valid{
     box-shadow: -4px -4px 0px 0px var(--dark-blue);    
 }
 
+
+.color-blue{
+    color: #F9F9F9;
+    background-color: var(--ligth-blue);
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 4px 4px 0px 0px var(--dark-blue);
+}
 
