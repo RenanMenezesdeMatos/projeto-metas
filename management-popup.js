@@ -2,6 +2,7 @@
 let openPopUp = document.getElementById('content-forms-none')
 
 let callPopUp = function (){
+    openPopUp.classList.remove('content-forms-none')
     openPopUp.classList.add('content-forms')
 }
 

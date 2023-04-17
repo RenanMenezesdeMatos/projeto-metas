@@ -53,7 +53,8 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
         )
 
         let divCriada = document.getElementById(`goal-${row}`)
-        let inicializacao = document.getElementById('introduction-messenger')
+
+        let inicializacao = document.querySelector('.initialing-program')
 
         divCriada.append(
             creatGoalsContent(`bin-${row}`, 'bin'),
@@ -67,6 +68,14 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
             creatBin()
         )
 
+        if(divCriada !== ''){
+        inicializacao.classList.remove('initialing-program')
+        inicializacao.classList.add('initialing-program-none')
+
+        document.getElementById('content-forms-none').classList.add('content-forms-none')
+        document.getElementById('content-forms-none').classList.remove('content-forms')
+     
+        }
         
         objectiveName.value=''
     }
