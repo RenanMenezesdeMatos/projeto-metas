@@ -41,7 +41,20 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
         let creatImageBin = document.createElement('img')
         creatImageBin.src = "image/Bin.png"
         creatImageBin.alt = "Lixeira"
+
+        creatImageBin.addEventListener('click', function(e){
+            let image = e.currentTarget
+            let bin1 = image.parentNode
+            let goal = bin1.parentNode
+
+            goal.remove()
+
+
+
+        })
+
         return creatImageBin
+
     }
 
 
@@ -54,7 +67,7 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
 
         let divCriada = document.getElementById(`goal-${row}`)
 
-        let inicializacao = document.querySelector('.initialing-program')
+        let inicializacao = document.getElementById('initialing-program')
 
         divCriada.append(
             creatGoalsContent(`bin-${row}`, 'bin'),
@@ -74,11 +87,21 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
 
         document.getElementById('content-forms-none').classList.add('content-forms-none')
         document.getElementById('content-forms-none').classList.remove('content-forms')
-     
-        }
+
+        } 
         
         objectiveName.value=''
+
+        let deletContent = function(bin){
+            let deletada = bin.currentTarget
+            deletada.addEventListener('click', function(){
+
+            })
+        }
+
     }
 
-    export {creatGoalsGeneral, creatGoalsContent, creatBin, creatAllElementsGoals, containerMainContent,row,objectiveName, textContent}
+    
+
+    export {creatGoalsGeneral, creatGoalsContent, creatBin, creatAllElementsGoals, containerMainContent,row,objectiveName, textContent, }
 
