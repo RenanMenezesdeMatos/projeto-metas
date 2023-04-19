@@ -1,10 +1,18 @@
+import {textContent} from "/calc.js"
+
+
 let containerMainContent = document.getElementById('container-main-content')
 let row = 0
 
 // Capturando os valores dos Inputs//
 
 let objectiveName = document.getElementById('objective-name')
-let textContent = `Você atingiu o seu objetivo, em (inserir variável de data futura) seu objetivo custará (inserir variável de valor total), se for persistente seu objetivo te custará (Inserir variável do valor mensal) ao mês.`
+let objectiveCost = document.getElementById('objective-cost')
+let objectiveTime = document.getElementById('objective-time')
+let objectiveSavings = document.getElementById('objective-savings')
+
+
+
 
 
 // Fim da captura dos valores dos Inputs//
@@ -49,7 +57,14 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
 
             goal.remove()
 
+            let divCriada = document.getElementById(`goal-${row}`)
+            
+            let inicializacao = document.getElementById('initialing-program')
 
+            if(divCriada === null ){
+                inicializacao.classList.remove('initialing-program-none')
+                inicializacao.classList.add('initialing-program')
+            }
 
         })
 
@@ -60,6 +75,7 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
 
 
     let creatAllElementsGoals = function (){
+
         row++
         containerMainContent.append(
             creatGoalsGeneral('goal-'+row)
@@ -89,19 +105,16 @@ let textContent = `Você atingiu o seu objetivo, em (inserir variável de data f
         document.getElementById('content-forms-none').classList.remove('content-forms')
 
         } 
+
+        if(objectiveName || objectiveCost || objectiveTime || objectiveSavings == "" ){
+            
+        }
         
         objectiveName.value=''
 
-        let deletContent = function(bin){
-            let deletada = bin.currentTarget
-            deletada.addEventListener('click', function(){
-
-            })
-        }
-
     }
 
-    
+        
 
     export {creatGoalsGeneral, creatGoalsContent, creatBin, creatAllElementsGoals, containerMainContent,row,objectiveName, textContent, }
 

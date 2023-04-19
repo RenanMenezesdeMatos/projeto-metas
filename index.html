@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Crie suas metas!</title>
     <script src="index.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 
 </head>
 <body>
@@ -109,12 +110,12 @@
             <label for="objective-name">Dê um nome para seu objetivo!</label>
             <input type="text" name="objective-name" id="objective-name" class="formulario">
             <label for="objective-cost">Quanto custa seu objetivo?</label>
-            <input type="text" name="objective-cost" id="objective-cost" class="formulario">
+            <input type="number" name="objective-cost" id="objective-cost" class="formulario">
             <label for="objective-time">Quando você pretende atingir seu objetivo?</label>
-            <input type="text" name="objective-time" id="objective-time" class="formulario">
+            <input type="date" name="objective-time" id="objective-time" class="formulario" placeholder="Insira quanto custa seu objetivo">
             <label for="objective-savings">Quanto tem guardado?</label>
-            <input type="text" name="objective-savings" id="objective-savings" class="formulario">
-            <div id="create-goal-btn">Criar Meta!</div>
+            <input type="number" name="objective-savings" id="objective-savings" class="formulario">
+            <button type="submit" id="create-goal-btn">Criar Meta!</div>
         </form>
 
     </div>
