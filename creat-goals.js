@@ -106,10 +106,7 @@ let objectiveSavings = document.getElementById('objective-savings')
 
         } 
 
-        if(objectiveName || objectiveCost || objectiveTime || objectiveSavings == "" ){
-            
-        }
-        
+           
         objectiveName.value=''
 
     }
