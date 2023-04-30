@@ -40,9 +40,12 @@ let objectiveSavings = document.getElementById('objective-savings')
     }
 
     let creatTextArea = function(){
-        let textArea = document.createElement('p')
-        textArea.innerText = `Você atingiu o seu objetivo, em (inserir variável de data futura) seu objetivo custará (inserir variável de valor total), se for persistente seu objetivo te custará (Inserir variável do valor mensal) ao mês`
-        return textArea
+        //let textArea = document.createElement('p')
+        //textArea.innerText = `Você atingiu o seu objetivo, em (inserir variável de data futura) seu objetivo custará (inserir variável de valor total), se for persistente seu objetivo te custará (Inserir variável do valor mensal) ao mês`
+
+
+
+        return textContent
     }
 
     let creatBin = function (){
