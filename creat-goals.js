@@ -77,8 +77,8 @@ let objectiveSavings = document.getElementById('objective-savings')
 
 
 
-    let creatAllElementsGoals = function (){
-
+    let creatAllElementsGoals = function (ev){
+        ev.preventDefault()
         row++
         containerMainContent.append(
             creatGoalsGeneral('goal-'+row)
