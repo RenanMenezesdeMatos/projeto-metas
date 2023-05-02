@@ -1,8 +1,8 @@
 
 let convertDate = function (dataInput){
     let dataInserida = new Date(dataInput)
-    let day = String(dataInserida.getDate()).padStart(2, '0'); // No método padStart você define a quantidade de caracteres (neste caso defini 2 numeros máximos) e caso não tenha 2 qual numero será utilizado para preencher, neste caso inseri a string '0'
-    let month = String(dataInserida.getMonth()).padStart(2, '0') + 1;
+    let day = dataInserida.getDate()+1;
+    let month = dataInserida.getMonth()+1;
     let year = dataInserida.getFullYear();
 
     let fullDate = `${day}/${month}/${year}`
@@ -11,9 +11,13 @@ let convertDate = function (dataInput){
 }
 
 
-let diferencaEmDias = function (data1, data2) {
-    const umDia = 24 * 60 * 60 * 1000; // número de milissegundos em um dia
-    return Math.round(Math.abs((data2 - data1) / umDia)); // retorna o número de dias
+let diferencaEmDias = function (data2, data1) {
+
+    const diffInMs = new Date(data1) - new Date (data2)
+    const diffInDays = diffInMs / (1000*60*60*24)
+
+    return diffInDays
+
 }
     
 let totalValue = function (valor, dataFutura){
