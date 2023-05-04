@@ -13,23 +13,23 @@ let convertDate = function (dataInput){
 
 let diferencaEmDias = function (data2, data1) {
 
-    const diffInMs = new Date(data1) - new Date (data2)
-    const diffInDays = diffInMs / (1000*60*60*24)
+    const diffInMs = new Date(data1) - new Date (data2) -1
+    const diffInDays = Math.trunc(diffInMs / (1000*60*60*24))
 
     return diffInDays
 
 }
     
 let totalValue = function (valor, dataFutura){
-    let dataInserida = new Date(dataFutura)
-    convertDate(dataInserida)
-    let valorTotal = valor * (diferencaEmDias(new Date, dataFutura)/30)
+    //let dataInserida = new Date(dataFutura)
+    //convertDate(dataInserida)
+    let valorTotal = valor * Math.trunc((diferencaEmDias(new Date(Date.now()), (dataFutura)))/30)
     return valorTotal
 }
 
 function adicionarDias(data, dias) {
-    var dataSum = new Date(convertDate(data));
-    dataSum.setDate(dataSum.getDate() + dias);
+    var dataSum = new Date(data);
+    dataSum.setDate(dataSum.getDate() + dias +1);
     return dataSum;
   }
   
@@ -39,8 +39,8 @@ function adicionarDias(data, dias) {
 let dateInput = document.getElementById('objective-time').value
 let orcamento = document.getElementById('objective-cost').value
 
-let daysOn = diferencaEmDias(new Date(), dateInput)
-let dataFutura = adicionarDias(convertDate(dateInput), daysOn)
+let daysOn = diferencaEmDias(new Date(Date.now()), dateInput)
+let dataFutura = adicionarDias(dateInput, daysOn)
 let totalObjetivo = totalValue(orcamento, dataFutura)
 
 
