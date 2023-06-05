@@ -47,7 +47,7 @@ function adicionarDias(data, dias) {
 // captura de dados
 */
 
-let dataInput = dayjs(document.getElementById('objective-time').value).format(DD/MM/YYYY)
+let dataInput = document.getElementById('objective-time').value
 let orcamento = document.getElementById('objective-cost').value
 
 
@@ -57,7 +57,7 @@ let dataFutura = adicionarDias(dataInput, daysOn)
 let totalObjetivo = totalValue(orcamento, dataFutura)
 */
 
-dayjs(dataInput).format(DD/MM/YYYY)
+
 
 let textContent = `Você atingirá o seu objetivo, em ${dataInput.toString()}, seu objetivo custará ${totalObjetivo}, se for persistente seu objetivo te custará ${totalObjetivo} ao mês.`
 
