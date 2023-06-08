@@ -111,6 +111,8 @@ let objectiveSavings = document.getElementById('objective-savings')
 
            
         objectiveName.value=''
+        objectiveCost.value=''
+        objectiveSavings.value=''
 
     }
 

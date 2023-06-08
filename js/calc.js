@@ -41,14 +41,21 @@ let totalValue = function (valor, dataFutura){
 function adicionarDias(data, dias) {
     var dataSum = new Date(data)
     dataSum.setDate((dataSum.getDate() + dias +1));
-    return convertDate(dataSum);
+    return convertDate(dataSum);dif
   }
 
 // captura de dados
 */
 
-let dataInput = document.getElementById('objective-time').value
+let dataInput = new Date(document.getElementById('objective-time').value)
 let orcamento = document.getElementById('objective-cost').value
+
+let atualDay = new Date()
+
+let atualDayJs = dayjs(atualDay).format('DD-MM-YYYY')
+let dataInputDayJs = dayjs(dataInput).format('DD-MM-YYYY')
+
+var duration = dayjs.duration(atualDayJs.diff(dataInputDayJs))
 
 
 /*
@@ -59,7 +66,7 @@ let totalObjetivo = totalValue(orcamento, dataFutura)
 
 
 
-let textContent = `Você atingirá o seu objetivo, em ${dataInput.toString()}, seu objetivo custará ${totalObjetivo}, se for persistente seu objetivo te custará ${totalObjetivo} ao mês.`
+let textContent = `Você atingirá o seu objetivo, em ${duration}, seu objetivo custará xxxx, se for persistente seu objetivo te custará xxxx ao mês.`
 
 
 export {textContent}
