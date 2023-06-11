@@ -55,7 +55,11 @@ let atualDay = new Date()
 let atualDayJs = dayjs(atualDay).format('DD-MM-YYYY')
 let dataInputDayJs = dayjs(dataInput).format('DD-MM-YYYY')
 
-var duration = dayjs.duration(atualDayJs.diff(dataInputDayJs))
+const date1 = dayjs('2019-01-25')
+const date2 = dayjs('2018-06-05')
+
+date1.diff('2018-06-05', 'month', true)
+
 
 
 /*
@@ -66,7 +70,7 @@ let totalObjetivo = totalValue(orcamento, dataFutura)
 
 
 
-let textContent = `Você atingirá o seu objetivo, em ${duration}, seu objetivo custará xxxx, se for persistente seu objetivo te custará xxxx ao mês.`
+let textContent = `Você atingirá o seu objetivo, em ${date1}, seu objetivo custará xxxx, se for persistente seu objetivo te custará xxxx ao mês.`
 
 
 export {textContent}
