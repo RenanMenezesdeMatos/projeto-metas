@@ -1,4 +1,6 @@
 const dayjs = require('dayjs')
+var duration = require ('dayjs/plugin/duration')
+var customParseFormat = require('dayjs/plugin/customParseFormat')
 
 /*let convertDate = function (dataInput){
     let dataInserida = new Date(dataInput)
@@ -47,19 +49,18 @@ function adicionarDias(data, dias) {
 // captura de dados
 */
 
-let dataInput = new Date(document.getElementById('objective-time').value)
+let dataInput = document.getElementById('objective-time').value
 let orcamento = document.getElementById('objective-cost').value
 
 let atualDay = new Date()
 
-let atualDayJs = dayjs(atualDay).format('DD-MM-YYYY')
-let dataInputDayJs = dayjs(dataInput).format('DD-MM-YYYY')
+let atualDayJs = new Date(dayjs(atualDay).format('YYYY-MM-DD'))
+let dataInputDayJs = new Date(dayjs(dataInput).format('YYYY-MM-DD'))
 
-const date1 = dayjs('2019-01-25')
-const date2 = dayjs('2018-06-05')
+const data1 = dayjs(atualDayJs);
+const data2 = dayjs(dataInputDayJs);
 
-date1.diff('2018-06-05', 'month', true)
-
+const diferencaEmDias = data2.diff(data1, 'day');
 
 
 /*
@@ -70,7 +71,7 @@ let totalObjetivo = totalValue(orcamento, dataFutura)
 
 
 
-let textContent = `Você atingirá o seu objetivo, em ${date1}, seu objetivo custará xxxx, se for persistente seu objetivo te custará xxxx ao mês.`
+let textContent = `Você atingirá o seu objetivo, em ${diferencaEmDias}, seu objetivo custará xxxx, se for persistente seu objetivo te custará xxxx ao mês.`
 
 
 export {textContent}

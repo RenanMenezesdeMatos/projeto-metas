@@ -1,3 +1,5 @@
+var duration = require ('dayjs/plugin/duration')
+
 module.exports = {
     entry: {
         index: 'C:/Users/Renan/Documents/projeto-metas/js/index.js',
