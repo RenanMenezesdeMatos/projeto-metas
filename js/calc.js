@@ -52,26 +52,28 @@ function adicionarDias(data, dias) {
 let dataInput = document.getElementById('objective-time').value
 let orcamento = document.getElementById('objective-cost').value
 
-let atualDay = new Date()
+let atualDay = dayjs().format('YYYY-MM-DD')
 
-let atualDayJs = new Date(dayjs(atualDay).format('YYYY-MM-DD'))
-let dataInputDayJs = new Date(dayjs(dataInput).format('YYYY-MM-DD'))
+let funcaoContarDias = function () {
 
-const data1 = dayjs(atualDayJs);
-const data2 = dayjs(dataInputDayJs);
+    let dataInput = document.getElementById('objective-time').value
 
-const diferencaEmDias = data2.diff(data1, 'day');
+    let data1 = dayjs(atualDay);
+    let data2 = dayjs(dataInput);
+
+    const diferencaEmDias = data2.diff(data1, 'day');
+
+    
+
+    return `${diferencaEmDias}`
+
+}
 
 
-/*
-let daysOn = diferencaEmDias(atualDay(), dataInput)
-let dataFutura = adicionarDias(dataInput, daysOn)
-let totalObjetivo = totalValue(orcamento, dataFutura)
-*/
 
 
 
-let textContent = `Você atingirá o seu objetivo, em ${diferencaEmDias}, seu objetivo custará xxxx, se for persistente seu objetivo te custará xxxx ao mês.`
+let textContent = `Você atingirá o seu objetivo, em ${funcaoContarDias()}, seu objetivo custará xxxx, se for persistente seu objetivo te custará xxxx ao mês.`
 
 
 export {textContent}

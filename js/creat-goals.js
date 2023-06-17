@@ -108,7 +108,6 @@ let objectiveSavings = document.getElementById('objective-savings')
         document.getElementById('content-forms-none').classList.remove('content-forms')
 
         } 
-
            
         objectiveName.value=''
         objectiveCost.value=''
